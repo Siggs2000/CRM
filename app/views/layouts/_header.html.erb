@@ -16,23 +16,23 @@
              root_path, :title=>"Return Home", :class=>"logo") %>
           <ul class="nav pull-right">      
             <li class="dropdown">
-             <!--  <div class="nav-logins"> -->
-              <%# if user_signed_in? %>
+              <div class="nav-logins">
+              <% if user_signed_in? %>
                 
-                <!--   <h5> link_to 'Logged in as:' &nbsp;  
-                     current_user.first_name %>&nbsp;&nbsp; current_user.last_name   -->
+                  <h5><%= link_to 'Logged in as:' %>&nbsp;  
+                     <%= current_user.email %>
                  
 
 
 
  
-                <!--   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   link_to "Logout", destroy_user_session_path, method: :delete %></h5> -->
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <%= link_to "Logout", destroy_user_session_path, method: :delete %></h5>
                 
-              <%# else %>  
-            <!--     <li> link_to "Sign up", new_user_registration_path %> |</li>
-                <li> link_to "Login", new_user_session_path %></li> -->
-              <%# end %> 
-        <!--     </div> -->
+              <% else %>  
+                <li> <%= link_to "Sign up", new_user_registration_path %> |</li>
+                <li> <%= link_to "Login", new_user_session_path %></li>
+              <% end %> 
+            </div>
             </li> 
           </ul>
         </div>

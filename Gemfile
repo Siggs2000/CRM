@@ -11,6 +11,7 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'simple_form'
 gem 'thin'
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.
