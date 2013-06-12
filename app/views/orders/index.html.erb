@@ -1,0 +1,28 @@
+
+
+<h2>Import</h2>
+<%= form_tag import_orders_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+<div class="hero-unit">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+	  			<th>Order Number</th>
+	  			<th>Store</th>
+	  			<th>Order Date</th>
+	  		</tr>
+	  	</thead>
+	  	<% Order.all.each do |x| %>
+		  	<tbody>
+		  		<tr>
+			  		<td><%= x.order_no %></td>
+			  		<td><%= x.store %></td>
+			  		<td><%= x.order_date %></td>
+			  	</tr>
+		  	</tbody>
+		<% end %>
+	</table>
+</div>
