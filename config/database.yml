@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: nana_convert_development
+  database: base_app_development
   pool: 5
   username: seth
   password:
@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: nana_convert_test
+  database: base_app_test
   pool: 5
   username: seth
   password:

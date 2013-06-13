@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-NanaConvert::Application.load_tasks
+Baseapp::Application.load_tasks
