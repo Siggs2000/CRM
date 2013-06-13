@@ -1,1 +1,2 @@
-<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+<% last = Contact.order("updated_at").last %>
+<h2>Thanks, you charged <strong><%= last.bill_amount %></strong>!</h2>

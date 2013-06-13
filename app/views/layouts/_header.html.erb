@@ -12,15 +12,24 @@
 
       <nav>
         <div class="nav-collapse">
-          <%=link_to(image_tag("rails.png", :alt=> "Logo"),
+          <%=link_to(image_tag("ball.png", :size => "60x60", :alt=> "Logo"),
              root_path, :title=>"Return Home", :class=>"logo") %>
-          <ul class="nav pull-right">      
+          <ul class="nav pull-right"> 
+            <li><h3><%= link_to "Contacts", contacts_path %></h3></li> 
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>    
+            <li><h3><%= link_to "Leads", contacts_path %></h3></li>   
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li> 
+            <li><h3><%= link_to "To Do's", contacts_path %></h3></li> 
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
             <li class="dropdown">
               <div class="nav-logins">
               <% if user_signed_in? %>
                 
-                  <h5><%= link_to 'Logged in as:' %>&nbsp;  
-                     <%= current_user.email %>
+                  <h5><%= link_to 'Logged in' %>
                  
 
 
