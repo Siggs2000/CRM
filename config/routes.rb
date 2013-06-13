@@ -1,9 +1,13 @@
-Baseapp::Application.routes.draw do
+Crm::Application.routes.draw do
 
 
   devise_for :users
 
   root :to => 'static_pages#index'
+
+  resources :contacts
+  resources :charges
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

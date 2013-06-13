@@ -1,0 +1,23 @@
+<div class="hero-unit">
+	<h1>Contacts</h1>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>View</th>
+	  			<th>First Name</th>
+	  			<th>Last Name</th>
+	  			<th>Email</th>
+	  		</tr>
+	  	</thead>
+	  	<% Contact.all.each do |x| %>
+		  	<tbody>
+		  		<tr>
+		  			<td><%= link_to 'View', contact_path(x), :class => 'btn btn-primary btn-success' %></td>
+			  		<td><%= x.first_name %></td>
+			  		<td><%= x.last_name %></td>
+			  		<td><%= x.email %></td>
+			  	</tr>
+		  	</tbody>
+		<% end %>
+	</table>
+</div>
