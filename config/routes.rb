@@ -5,9 +5,9 @@ Crm::Application.routes.draw do
 
   root :to => 'static_pages#index'
 
-  resources :contacts
   resources :charges
-  
+  resources :contacts
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

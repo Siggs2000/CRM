@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: crm_app_test
+  database: crm_test
   pool: 5
   username: seth
   password:
